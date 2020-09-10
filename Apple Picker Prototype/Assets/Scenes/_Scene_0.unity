@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -298,6 +299,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07745c9f5c27273408ab639ffe6d9b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  basketPrefab: {fileID: 3032434357529918398, guid: 1c85bea59f51d3145b463721b0d63b6d, type: 3}
+  numBaskets: 3
+  basketBottomY: -14
+  basketSpacingY: 2
 --- !u!850595691 &1007842392
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -366,13 +383,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1047157342693156162, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
+      propertyPath: m_IsKinematic
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1047157342693156163, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1047157342693156163, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 1047157342693156163, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -414,5 +435,39 @@ PrefabInstance:
       propertyPath: m_Name
       value: AppleTree
       objectReference: {fileID: 0}
+    - target: {fileID: 1047157342693156165, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047157342906727967, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1047157344248288697, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
+--- !u!1 &1047157343448596927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1047157342693156165, guid: 4855262897e90dc4ebe9979e91857acd, type: 3}
+  m_PrefabInstance: {fileID: 1047157343448596926}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1047157343448596928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1047157343448596927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d24d85679967b949b6f7fd653929b42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applePrefab: {fileID: 8315806447947081800, guid: 245f99cbb6a2e734bbe64af00fd1b2e4, type: 3}
+  speed: 10
+  leftAndRightEdge: 20
+  chanceToChangeDirections: 0.001
+  secondsBetweenAppleDrops: 1
