@@ -18,6 +18,13 @@ public class AppleTree : MonoBehaviour
     public float secondsBetweenAppleDrops = 1f;
     public float[] secondsBetweenAppleDropsDifficulty = { 2, 3, 4, 5, 6};
     public float difficulty1Reference;
+    public float difficulty2Reference;
+    public float difficulty3Reference;
+    public float difficulty4Reference;
+    public float difficulty5Reference;
+
+    
+    
 
 
     // Start is called before the first frame update
@@ -29,10 +36,15 @@ public class AppleTree : MonoBehaviour
         GameObject scoreGO = GameObject.Find("ScoreCounter");
         scoreGT = scoreGO.GetComponent<Text>();
 
-
-        GameObject Difficulty = GameObject.FindGameObjectWithTag("Difficulty");
         difficulty1Reference = Difficulty.getDifficulty1();
 
+        difficulty2Reference = Difficulty.getDifficulty2();
+
+        difficulty3Reference = Difficulty.getDifficulty3();
+
+        difficulty4Reference = Difficulty.getDifficulty4();
+
+        difficulty5Reference = Difficulty.getDifficulty5();
 
 
     }
@@ -85,7 +97,7 @@ public class AppleTree : MonoBehaviour
             
 
         }
-        else if (score == 2000)
+        else if (score == difficulty2Reference)
         {
             speed = 0;
             speed = speedArray[1];
@@ -94,7 +106,7 @@ public class AppleTree : MonoBehaviour
             
 
         }
-        else if (score == 3500)
+        else if (score == difficulty3Reference)
         {
             speed = 0;
             speed = speedArray[2];
@@ -102,7 +114,7 @@ public class AppleTree : MonoBehaviour
             secondsBetweenAppleDrops = secondsBetweenAppleDropsDifficulty[2];
 
         }
-        else if (score == 5000)
+        else if (score == difficulty4Reference)
         {
             speed = 0;
             speed = speedArray[3];
@@ -110,7 +122,7 @@ public class AppleTree : MonoBehaviour
             secondsBetweenAppleDrops = secondsBetweenAppleDropsDifficulty[3];
 
         }
-        else if (score == 10000)
+        else if (score == difficulty5Reference)
         {
             speed = 0;
             speed = speedArray[4];
